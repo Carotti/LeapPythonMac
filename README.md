@@ -1,4 +1,5 @@
 Python3+ Leap Motion SDK on Mac
+===============================
 
 Requirements (install with brew):
 * C++ compiler (tested with clang 4.2.1)
