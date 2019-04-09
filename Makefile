@@ -3,8 +3,6 @@ LEAPPYTHON = ./LeapPython
 
 PYTHON = python3.6
 
-$(error $(PYTHON))
-
 define python_config
     $(shell $(PYTHON) -c 'from distutils import sysconfig; print(sysconfig.get_config_var("$(1)"))')
 endef
