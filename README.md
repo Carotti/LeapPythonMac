@@ -15,3 +15,8 @@ And making sure your Leap Motion is plugged in, you should be able to run the sa
 ```sh
 <python> Sample.py
 ```
+
+If you want to start again or use a different python version, just run
+```sh
+make clean
+```

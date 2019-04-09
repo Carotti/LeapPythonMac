@@ -16,7 +16,7 @@ ifeq ($(shell test -d $(LEAPSDK); echo $$?),1)
 $(LEAPSDK): Leap_Motion_SDK_*.tgz
 	tar -xvf $^
 	mv LeapDeveloperKit_*/LeapSDK/ .
-	rm -rf $^ LeapDeveloperKit_*/
+	rm -rf LeapDeveloperKit_*/
 else
 $(LEAPSDK):
 endif
@@ -36,3 +36,6 @@ $(LEAPPYTHON)/libLeap.dylib: $(LEAPSDK)/lib/libLeap.dylib | $(LEAPPYTHON)
 
 $(LEAPPYTHON)/__init__.py: | $(LEAPPYTHON)
 	touch $@
+
+clean:
+	rm -rf $(LEAPPYTHON) $(LEAPSDK)
